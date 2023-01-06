@@ -29,5 +29,20 @@
             "email": "vtechasiaid@gmail.com"
         }
     ],
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php vdes package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php vdes vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php vdes key:generate --ansi"
+        ]
+    },
     "minimum-stability": "dev"
 }
