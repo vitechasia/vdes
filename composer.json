@@ -6,7 +6,7 @@
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "vdes/core": "^1.0.0"
+        "vdes/core": "^1.1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
