@@ -6,13 +6,6 @@ define('VDES_START', microtime(true));
 require __DIR__.'/vendor/autoload.php';
 
 $app = require_once __DIR__.'/bootstrap/app.php';
-$out = new \Symfony\Component\Console\Output\ConsoleOutput();
-$out->writeln(" _    __    __         
-| |  / /___/ /__  _____
-| | / / __  / _ \/ ___/
-| |/ / /_/ /  __(__  ) 
-|___/\__,_/\___/____/  
-                       v ".app()->version());
 $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
 
 $status = $kernel->handle(
