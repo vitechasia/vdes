@@ -48,6 +48,7 @@
             "@php vdes key:generate --ansi",
             "@php vdes vendor:publish --provider=Vdes\\Dreams\\DreamsServiceProvider --ansi --force",
             "@php vdes vendor:publish --provider=Vdes\\Crud\\CrudServiceProvider --ansi --force",
+            "@php vdes clear-compiled",
             "@php vdes vendor:publish --provider=Vdes\\PermisionRoles\\PermissionsServiceProvider --ansi --force",
             "@php vdes vendor:publish --provider=Vdes\\Menu\\MenuServiceProvider --ansi --force",
             "@php vdes route:clear --ansi"
