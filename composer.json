@@ -6,7 +6,7 @@
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "vdes/core": "^1.1.0"
+        "vdes/core": "self.version"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -41,21 +41,11 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php vdes key:generate --ansi"
-        ],
-        "post-create-project-cmd": [
-            "@php vdes vendor:publish --provider=Vdes\\Dreams\\DreamsServiceProvider --ansi --force"
-        ],
-        "post-create-project-cmd": [
-            "@php vdes vendor:publish --provider=Vdes\\Crud\\CrudServiceProvider --ansi --force"
-        ],
-        "post-create-project-cmd": [
-            "@php vdes vendor:publish --provider=Vdes\\PermisionRoles\\PermissionsServiceProvider --ansi --force"
-        ],
-        "post-create-project-cmd": [
-            "@php vdes vendor:publish --provider=Vdes\\Menu\\MenuServiceProvider --ansi --force"
-        ],
-        "post-optimize-route-project-cmd": [
+            "@php vdes key:generate --ansi",
+            "@php vdes vendor:publish --provider=Vdes\\Dreams\\DreamsServiceProvider --ansi --force",
+            "@php vdes vendor:publish --provider=Vdes\\Crud\\CrudServiceProvider --ansi --force",
+            "@php vdes vendor:publish --provider=Vdes\\PermisionRoles\\PermissionsServiceProvider --ansi --force",
+            "@php vdes vendor:publish --provider=Vdes\\Menu\\MenuServiceProvider --ansi --force",
             "@php vdes route:clear --ansi"
         ]
     },
