@@ -35,13 +35,28 @@
             "@php vdes package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php vdes vendor:publish --tag=laravel-assets --ansi --force"
+            "@php vdes vendor:publish --tag=vdes-assets --ansi --force"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
             "@php vdes key:generate --ansi"
+        ],
+        "post-create-project-cmd": [
+            "@php vdes vendor:publish --provider=Vdes\\Dreams\\DreamsServiceProvider --ansi --force"
+        ],
+        "post-create-project-cmd": [
+            "@php vdes vendor:publish --provider=Vdes\\Crud\\CrudServiceProvider --ansi --force"
+        ],
+        "post-create-project-cmd": [
+            "@php vdes vendor:publish --provider=Vdes\\PermisionRoles\\PermissionsServiceProvider --ansi --force"
+        ],
+        "post-create-project-cmd": [
+            "@php vdes vendor:publish --provider=Vdes\\Menu\\MenuServiceProvider --ansi --force"
+        ],
+        "post-optimize-route-project-cmd": [
+            "@php vdes route:clear --ansi"
         ]
     },
     "minimum-stability": "dev"
