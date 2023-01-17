@@ -165,7 +165,10 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Vdes\Dreams\DreamsServiceProvider::class,
+        Vdes\Crud\CrudServiceProvider::class,
+        Vdes\PermisionRoles\PermissionsServiceProvider::class,
+        Vdes\Menu\MenuServiceProvider::class,
         /*
          * Application Service Providers...
          */
