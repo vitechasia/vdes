@@ -5,7 +5,12 @@
     "require": {
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1"
+        "guzzlehttp/guzzle": "^7.0.1",
+        "vdes/core": "self.version",
+        "vdes/dreams": "self.version",
+        "vdes/crud": "self.version",
+        "vdes/menu": "self.version",
+        "vdes/permision_roles": "self.version"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -28,5 +33,25 @@
             "email": "vtechasiaid@gmail.com"
         }
     ],
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php vdes package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php vdes vendor:publish --tag=vdes-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php vdes key:generate --ansi",
+            "@php vdes vendor:publish --provider=Vdes\\Dreams\\DreamsServiceProvider --ansi --force",
+            "@php vdes vendor:publish --provider=Vdes\\Crud\\CrudServiceProvider --ansi --force",
+            "@php vdes vendor:publish --provider=Vdes\\PermisionRoles\\PermissionsServiceProvider --ansi --force",
+            "@php vdes vendor:publish --provider=Vdes\\Menu\\MenuServiceProvider --ansi --force",
+            "@php vdes route:clear --ansi"
+        ]
+    },
     "minimum-stability": "dev"
 }

@@ -137,7 +137,7 @@ return [
     'providers' => [
 
         /*
-         * Laravel Framework Service Providers...
+         * Vdes Framework Service Providers...
          */
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -165,7 +165,10 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Vdes\Dreams\DreamsServiceProvider::class,
+        Vdes\Crud\CrudServiceProvider::class,
+        Vdes\PermisionRoles\PermissionsServiceProvider::class,
+        Vdes\Menu\MenuServiceProvider::class,
         /*
          * Application Service Providers...
          */
