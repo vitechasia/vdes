@@ -6,11 +6,11 @@
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "vdes/core": "self.version",
-        "vdes/dreams": "self.version",
-        "vdes/crud": "self.version",
-        "vdes/menu": "self.version",
-        "vdes/permision_roles": "self.version"
+        "vdes/core": "^1.2.2",
+        "vdes/dreams": "^1.0.0",
+        "vdes/crud": "^1.0.0",
+        "vdes/menu": "^1.0.0",
+        "vdes/permision_roles": "^1.0.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
