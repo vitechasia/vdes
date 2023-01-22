@@ -168,6 +168,7 @@ return [
         Vdes\Dreams\DreamsServiceProvider::class,
         Vdes\Crud\CrudServiceProvider::class,
         Vdes\PermisionRoles\PermissionPublishServiceProvider::class,
+        Vdes\PermisionRoles\PermissionsServiceProvider::class,
         Vdes\Menu\MenuServiceProvider::class,
         /*
          * Application Service Providers...
@@ -232,8 +233,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Permis' => Vdes\PermisionRoles\PermissionsServiceProvider::class,
-
     ],
 
 ];
